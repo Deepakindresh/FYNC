@@ -1,0 +1,128 @@
+body {
+    background-image: url("img/bg1.jpg");
+    background-size: cover;
+}
+
+header {
+    width: 100%;
+    height: 50vh;
+    background-image: url("img/Stores/Pandian 1.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    background-blend-mode: darken;
+}
+
+.heading {
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    background-color: orange;
+    opacity: 0.9;
+    margin-top: 200px;
+}
+
+.container {
+    min-width: 500px;
+    margin: auto;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: repeat(2, 550px);
+    grid-gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 100px;
+    grid-auto-rows: 500px;
+    justify-items: center;
+    justify-content: center;
+    align-items: stretch;
+    align-content: center;
+    grid-auto-rows: 500px;
+    grid-auto-flow: row dense;
+    z-index: 4;
+}
+
+.item {
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.5);
+    background-color: whitesmoke;
+    width: 270px;
+    margin-top: 20px;
+}
+
+.item img {
+    width: 270px;
+    height: 150px;
+}
+
+.description {
+    font-family: Work Sans;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.29;
+    letter-spacing: 0.1px;
+    text-align: left;
+    color: #4a4a4a;
+    padding: 10px 0px 10px 10px;
+    border-top: 2px solid rgb(2, 7, 68);
+}
+
+h2 {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    text-align: center;
+    color: #ffa500;
+    padding: 10px 0px 10px 10px;
+}
+
+.box {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    border: 2px solid red;
+    padding: 14px 40px;
+    outline: none;
+    color: red;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+    text-decoration: none;
+    width: 80px;
+}
+
+.box:hover {
+    background: red;
+    color: white;
+    width: 100px;
+}
+
+i {
+    padding-left: 10px;
+    width: 20px;
+    height: auto;
+    color: rgb(2, 7, 68);
+}
+
+.cost,
+.quantity,
+.stock {
+    display: inline-block;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    text-align: left;
+    color: #4a4a4a;
+    position: relative;
+}
+
+footer {
+    background-color: rgb(2, 7, 68);
+    color: white;
+}
