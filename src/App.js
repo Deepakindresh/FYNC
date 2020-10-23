@@ -1,25 +1,50 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Switch, Route} from "react-router-dom"
 import './App.css';
-
+import Welcome from "./Welcome";
+import Clogin from "./Customer/Clogin";
+import Cshops from "./Customer/Cshops";
+import Ccheckout from "./Customer/Ccheckout";
+import Cproducts from "./Customer/Cproducts";
+import Rlogin from "./Retailer/RLogin";
+import Rproducts from "./Retailer/Rproducts";
+import Ryourshop from "./Retailer/Ryourshop";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Router>
+     <div className="App">
+       <Switch>
+
+          <Route path="/">
+            <Welcome/>
+          </Route>
+          <Route path="/customer/login">
+            <Clogin/>
+          </Route>
+          <Route path="/customer/shops">
+            <Cshops/>
+          </Route>
+          <Route path="/customer/products">
+            <Cproducts/>
+          </Route>
+          <Route path="/customer/checkout">
+            <Ccheckout/>
+          </Route>
+
+          <Route path="/retailer/login">
+            <Rlogin/>
+          </Route>
+          <Route path="/retailer/products">
+            <Rproducts/>
+          </Route>
+          <Route path="/retailer/yourshop">
+            <Ryourshop/>
+          </Route>
+
+       </Switch>
     </div>
+    </Router>
+    
   );
 }
 
