@@ -9,15 +9,15 @@ import Cproducts from "./Customer/Cproducts";
 import Rlogin from "./Retailer/RLogin";
 import Rproducts from "./Retailer/Rproducts";
 import Ryourshop from "./Retailer/Ryourshop";
+import Rsignup from "./Retailer/Rsignup";
 function App() {
+ 
   return (
     <Router>
      <div className="App">
        <Switch>
 
-          <Route path="/">
-            <Welcome/>
-          </Route>
+          
           <Route path="/customer/login">
             <Clogin/>
           </Route>
@@ -34,14 +34,23 @@ function App() {
           <Route path="/retailer/login">
             <Rlogin/>
           </Route>
+          <Route path="/retailer/signup">
+            <Rsignup/>
+          </Route>
           <Route path="/retailer/products">
             <Rproducts/>
           </Route>
           <Route path="/retailer/yourshop">
             <Ryourshop/>
           </Route>
+          <Route path="/">
+            <Welcome/>
+          </Route>
+          
 
        </Switch>
+       
+      
     </div>
     </Router>
     
