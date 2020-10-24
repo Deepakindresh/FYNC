@@ -8,9 +8,10 @@
     font-size: 150%;
     font-family: 'Courier New', Courier, monospace ;
     display: flex;
-    z-index: 0;
+    z-index: 5;
     margin: 0px;
     min-block-size: 40px;
+    top: 0;
 }
 
 .log1{
@@ -25,29 +26,4 @@
     min-height: 50px;
     min-width: 50px;
 }
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    display: flex;
-  }
-
-  a{
-      text-decoration: none;
-    }
-
-  .btn {
-    border: none;
-    background-color: inherit;
-    padding: 14px 28px;
-    font-size: 16px;
-    cursor: pointer;
-    display: inline-block;
-  }
-  /* On mouse-over */
-.btn:hover {background: rgb(70, 146, 67);}
-
-.success {color: rgb(255, 255, 255);}
 

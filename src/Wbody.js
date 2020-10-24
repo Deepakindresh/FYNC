@@ -8,42 +8,42 @@ import l5 from './img/medic.png'
 
 function Wbody() {
     return (
-    <div class="body">
-        <div class="slidershow">        
-            <div class="slides">
+    <div className="body">
+        <div className="slidershow">        
+            <div className="slides">
                 <input type="radio" name="r" id="r1" checked/>
                 <input type="radio" name="r" id="r2"/>
                 <input type="radio" name="r" id="r3"/>
                 <input type="radio" name="r" id="r4"/>
                 <input type="radio" name="r" id="r5"/>
-                <div class="slide s1">
+                <div className="slide s1">
                     <img src={l1} alt=""/>
-                    <div class="content">
+                    <div className="content">
                     </div>
                 </div>
-                <div class="slide">
+                <div className="slide">
                     <img src={l2} alt=""/>
                 </div>
-                <div class="slide">
+                <div className="slide">
                     <img src={l3} alt=""/>
                 </div>
-                <div class="slide">
+                <div className="slide">
                     <img src={l4} alt=""/>
                 </div>
-                <div class="slide">
+                <div className="slide">
                     <img src={l5} alt=""/>
-                    <div class="content c">
+                    <div className="content c">
                         <a href="" type="button">Sign in as User</a>
                         <a href="" type="button">Sign in as Retailer</a>
                     </div>
                 </div>
             </div>
             <div class="navigation">
-                <label for="r1" class="bar"></label>
-                <label for="r2" class="bar"></label>
-                <label for="r3" class="bar"></label>
-                <label for="r4" class="bar"></label>
-                <label for="r5" class="bar"></label>
+                <label for="r1" className="bar"></label>
+                <label for="r2" className="bar"></label>
+                <label for="r3" className="bar"></label>
+                <label for="r4" className="bar"></label>
+                <label for="r5" className="bar"></label>
             </div>
         </div>
     </div>

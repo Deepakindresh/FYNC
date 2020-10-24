@@ -1,0 +1,38 @@
+.Contact {
+    background-color: rgb(0, 0, 45);
+    color: white;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    top: 95%;
+}
+
+.About {
+    background-color: rgb(0, 0, 33);
+    color: white;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    top: 109%;
+}
+
+.heading {
+    margin-top: 20px;
+    margin-left: 30px;
+    font-size: 35px;
+    color: rgb(124, 127, 141);
+}
+
+.contents {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+
+.contents1 {
+    color: white;
+    text-align: left;
+    font-size: 20px;
+    margin-left: 40px;
+}
+
