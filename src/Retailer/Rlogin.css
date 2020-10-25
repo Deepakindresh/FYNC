@@ -1,0 +1,153 @@
+.login {
+    background-color: white;
+    background-image: url(./grocery.jpg);
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login__logo {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    object-fit: contain;
+    width: 100px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+.login__container {
+    width: 300px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: orange;
+    opacity: 0.9;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.5);
+}
+
+.login__container > h1 {
+    font-weight: 500;
+    margin-bottom: 20px;
+    transition: 0.25s;
+  }
+
+.login__container > form > h5 {
+    margin-bottom: 5px;
+    transition: 0.25s;
+}
+
+.login__container > form > input {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    width: 100;
+    text-align: center;
+    border: 2px solid rgb(2, 7, 68);
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+  }
+  .login__container > form > input:hover {
+    width: 130px;
+}
+
+.login__container > p {
+    margin-top: 15px;
+    font-size: 12px;
+    transition: 0.25s;
+}
+.login__container > p :hover {
+    background: rgb(2, 7, 68);
+    width: 130px;
+}
+
+.login__signInButton {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    width: 100;
+    text-align: center;
+    border: 2px solid rgb(2, 7, 68);
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+  }
+
+  .login__registerButton {
+    border: 0;
+    background: rgb(2, 7, 68);
+    display: block;
+    margin: 20px auto;
+    width: 100;
+    text-align: center;
+    border: 2px solid rgb(2, 7, 68);
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+    
+  }
+  .login__registerButton:hover {
+    background-color: white;
+    color: rgb(2, 7, 68);
+    transition: 1s;
+    width: 230px;
+  }
+  .login__container > form > input:hover {
+    width: 130px;
+}
+
+.login__container > p {
+    margin-top: 15px;
+    font-size: 12px;
+    transition: 0.25s;
+}
+.login__container > p :hover {
+    background: rgb(2, 7, 68);
+    width: 130px;
+}
+
+.login__signInButton {
+    border: 0;
+    background:rgb(2, 7, 68);
+    display: block;
+    margin: 20px auto;
+    width: 100;
+    text-align: center;
+    border: 2px solid rgb(2, 7, 68);
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+    transition-duration: 1s;
+  }
+  .login__signInButton:hover {
+    background-color: white; /* Green */
+    color: rgb(2, 7, 68);
+    transition-duration: 1s;
+    width: 170px;
+  }
+
+  #bold {
+    opacity: 1;
+}
+
+
