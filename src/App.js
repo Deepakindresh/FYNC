@@ -14,6 +14,7 @@ import Ryourshop from "./Retailer/Ryourshop";
 import Rsignup from "./Retailer/Rsignup";
 import Wheader from "./Wheader"
 import Rheader from "./Retailer/Rheader"
+import Cheader from "./Customer/Cheader"
 
 
 
@@ -56,15 +57,15 @@ function App() {
             <Clogin/>
           </Route>
 
-          <Route path="/customer/shops">
-            <Cshops/>
-          </Route>
+          
 
           <Route path="/customer/products">
+            <Cheader/>
             <Cproducts/>
           </Route>
 
           <Route path="/customer/checkout">
+            <Cheader/>
             <Ccheckout/>
           </Route>
 
@@ -88,9 +89,14 @@ function App() {
           </Route>
 
           
-          <Route path="/">
+          <Route path="/Welcome">
             <Wheader/>
             <Welcome/>
+          </Route>
+
+          <Route path="/">
+            <Cheader/>
+            <Cshops/>
           </Route>
 
        </Switch>

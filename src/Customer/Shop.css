@@ -1,0 +1,79 @@
+.shop {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin: 10px;
+  padding: 20px;
+  width: 100%;
+  max-height: 600px;
+  min-width: 100px;
+  background-color: whitesmoke;
+  z-index: 1;
+}
+
+.shop__info{
+    height: auto;
+    margin-top: 15px;
+}
+
+.shop__name{
+    color: orange;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid rgb(0, 0, 33);
+}
+.shop__addr{
+    font-size: 20px;
+    color: rgb(0, 0, 33);
+    margin-bottom: 3px;
+}
+
+.shop__phno{
+    font-size: 20px;
+    margin-bottom: 3px;
+    color: rgb(0, 0, 33);
+}
+
+.shop__email{
+    font-size: 20px;
+    margin-bottom: 3px;
+    color: rgb(0, 0, 33);
+}
+
+.shop__desc{
+    margin-top: 5px;
+    margin-bottom: 3px;
+    font-size: 20px;
+    color: rgb(0, 0, 33);
+}
+.shop__button{
+    text-align: center;
+    border: 2px green solid;
+    width: 100px;
+    border-radius: 20px;
+    background-color: green;
+    padding-top: 10px;
+    color: white;
+    margin-bottom: 3px;
+    margin-left: 35%;
+    height: 30px;
+    
+}
+
+.shop__button:hover{
+    background-color: white;
+    color: green;
+}
+
+.line{
+    border-bottom: 2px rgb(0, 0, 33) solid;
+}
+
+.shop__time{
+    font-size: 20px;
+    margin-bottom: 3px;
+    color: rgb(0, 0, 33);
+}

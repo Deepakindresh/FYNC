@@ -21,16 +21,6 @@ function RLogin() {
         })
         .catch((e) => alert(e.message));        
     }
-
-    const register = (event) => {
-        event.preventDefault();
-        auth.createUserWithEmailAndPassword(email, password)
-        .then((auth) => {
-            //created a user and signed in
-            history.push("/retailer/signup");
-        })
-        .catch((e) => alert(e.message)); 
-    }
     
     
     return (
@@ -50,8 +40,10 @@ function RLogin() {
                     type = "submit"
                     className="login__signInButton">Sign In</button>
                 </form>
-
-                <button onClick = {register}className='login__registerButton'>Create your Account</button>
+                <Link to="/retailer/signup" style = {{ textDecoration: 'none' }}>
+                    <button className='login__registerButton'>Create your Account</button>
+                </Link>
+                    
             </div>
             
         </div>

@@ -1,25 +1,25 @@
-.checkoutProduct{
+.ShopProduct{
     display: flex;
     margin: 20px 0;
-    background-color: white;
+    background-color: rgb(234, 237, 237);
 }
 
-.checkoutProduct__image{
+.ShopProduct__image{
     object-fit: contain;
     width: 180px;
     height: 180px;
 }
 
-.checkoutProduct__info{
+.ShopProduct__info{
     padding-left: 20px;
 }
 
-.checkoutProduct__title{
+.ShopProduct__title{
     font-size: 17px;
     font-weight: 800;
 }
 
-.checkoutProduct__info > button{
+.ShopProduct__info > button{
     background-color: #f0c14b;
     border: 1px solid;
     margin-top: 10px;
@@ -27,6 +27,6 @@
     color: #111;
 }
 
-.checkoutProduct__rating{
+.ShopProduct__rating{
     display: flex;
 }

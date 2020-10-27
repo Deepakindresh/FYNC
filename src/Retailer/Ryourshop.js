@@ -2,19 +2,34 @@ import React from 'react'
 import { useStateValue } from "../StateProvider"; 
 import "./Ryourshop.css";
 import ShopProduct from "./ShopProduct";
+import {auth,db} from "../Firebase";
+
 
 
 function Ryourshop() {
 
-    const [{ basket }] = useStateValue();
+    const [{ basket , retailer}] = useStateValue();
+    const sendBasket = (event) => {
+        event.preventDefault();
+        db.collection("Shops").doc("Ruben Bakery Basket").set({
+                     basket
+         })
+            .then(function(docRef) {
+             console.log("Document written");
+            })
+            .catch(function(error) {
+              console.error("Error adding document: ", error);
+            });
+    } 
+
 
     return (
         <div>
             <div className="Ryourshop">
-            <div className="Ryourshop__left">
+            
                 <img
             className = "Ryourshop__ad"
-            src = "https://images-na.ssl-images-amazon.com/images/G/02/UK_CCMP/TM/OCC_Amazon1._CB423492668_.jpg"
+            src = {retailer.map(x => x.image)}
             alt = ""
             />
             {basket?.length === 0 ? (
@@ -25,7 +40,11 @@ function Ryourshop() {
                 </div>
             ):(
                 <div>
-                    <h2 className="Ryourshop__title">Your Shop</h2>
+                    <div className="Ryourshop__title">
+                        <h2>Your Shop</h2>
+                        <div onClick={sendBasket} className="Ryourshop__save">Save</div>
+                    </div>
+                    
                     {basket.map(item => (
                         <ShopProduct
                         id = {item.id}
@@ -38,7 +57,7 @@ function Ryourshop() {
                 </div>
             )}
 
-            </div>
+            
         </div>
         </div>
     )
