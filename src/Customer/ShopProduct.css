@@ -1,0 +1,32 @@
+.ShopProduct{
+    display: flex;
+    margin: 20px 0;
+    background-color: rgb(234, 237, 237);
+}
+
+.ShopProduct__image{
+    object-fit: contain;
+    width: 180px;
+    height: 180px;
+}
+
+.ShopProduct__info{
+    padding-left: 20px;
+}
+
+.ShopProduct__title{
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.ShopProduct__info > button{
+    background-color: #f0c14b;
+    border: 1px solid;
+    margin-top: 10px;
+    border-color: #a88734 #9c7e31 #846a29;
+    color: #111;
+}
+
+.ShopProduct__rating{
+    display: flex;
+}

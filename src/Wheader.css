@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+}
+
+.header{
+    background-color: rgb(2, 26, 2);
+    color: white;
+    font-size: 150%;
+    font-family: 'Courier New', Courier, monospace ;
+    display: flex;
+    margin: 0px;
+    min-block-size: 40px;
+    top: 0;
+}
+
+.log1{
+    height: 50px;
+    width: 50px;
+    min-height: 50px;
+    min-width: 50px;
+}
+.log2{
+    height: 50px;
+    width: 90px;
+    min-height: 50px;
+    min-width: 50px;
+}
+
