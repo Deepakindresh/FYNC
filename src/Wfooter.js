@@ -9,7 +9,7 @@ function Wfooter() {
             <br/>
             <div className="contents">
                 <div>Phno: 987654321,012345678</div>
-                <div>Mail id: yourgroceries@gmail.com</div>
+                <div>Mail id: fync@gmail.com</div>
                 <br/>
             </div>
         </div>

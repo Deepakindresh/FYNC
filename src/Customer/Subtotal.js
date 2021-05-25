@@ -25,7 +25,7 @@ function Subtotal() {
         value={getBasketTotal(cbasket)} // Part of the homework
         displayType={"text"}
         thousandSeparator={true}
-        prefix={"$"}
+        prefix={"Rs"}
       />   
       <button>Proceed to Checkout</button>
         </div>
