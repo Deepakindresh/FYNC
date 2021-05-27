@@ -1,6 +1,5 @@
 .checkout{
     display: flex;
-    padding: 20px;
     background-color: rgb(234, 237, 237);;
     height: 1000px;
 }
@@ -10,6 +9,7 @@
 width: 1400px;
 margin-bottom: 10px;
 max-height: 200px;
+margin-top: 50px;
 }
 
 .checkout__title{
@@ -18,3 +18,111 @@ max-height: 200px;
     border-bottom: 1px solid lightgray;
 }
 
+.checkout__error{
+  padding: 10px;
+}
+
+/* Header CSS */
+
+*{
+    margin: 0;
+}
+
+.Cheader{
+    background-color: rgb(2, 26, 2);
+    color: white;
+    font-size: 150%;
+    font-family: 'Courier New', Courier, monospace ;
+    display: flex;
+    z-index: 5;
+    margin: 0px;
+    min-block-size: 40px;
+    top: 0;
+    position: fixed;
+    align-items: center;
+    width: 100%;
+    
+}
+
+.C__log1{
+    height: 50px;
+    width: 50px;
+    min-height: 50px;
+    min-width: 50px;
+}
+.C__log2{
+    height: 50px;
+    width: 90px;
+    min-height: 50px;
+    min-width: 50px;
+}
+
+.Cheader__logo {
+  width: 100px;
+  object-fit: contain;
+  margin: 0 20px;
+  margin-top: 18px;
+}
+
+.Cheader__search {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  border-radius: 24px;
+}
+
+.Cheader__searchInput {
+  height: 12px;
+  margin-left: 20px;
+  margin-right: 1px;
+  padding: 8px;
+  border: none;
+  width: 100%;
+}
+
+.Cheader__searchIcon {
+  padding: 5px;
+  height: 22px !important;
+  background-color: #cd9042;
+}
+
+.Cheader__optionLineOne {
+  font-size: 10px;
+  text-decoration: none;
+}
+
+.Cheader__optionLineTwo {
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.Cheader__optionBasket {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.Cheader__basketCount {
+  margin-left: 5px;
+  margin-right: 10px;
+}
+
+.Cheader__nav {
+  display: flex;
+  justify-content: space-evenly;
+  text-decoration: none;
+}
+
+.Cheader__option {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+Link{
+    text-decoration: none;
+}

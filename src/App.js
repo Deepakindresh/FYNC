@@ -60,12 +60,10 @@ function App() {
           
 
           <Route path="/customer/products">
-            <Cheader/>
             <Cproducts/>
           </Route>
 
           <Route path="/customer/checkout">
-            <Cheader/>
             <Ccheckout/>
           </Route>
 
@@ -79,12 +77,10 @@ function App() {
           </Route>
 
           <Route path="/retailer/products">
-            <Rheader/>
             <Rproducts/>
           </Route>
 
           <Route path="/retailer/yourshop">
-            <Rheader/>
             <Ryourshop/>
           </Route>
 
@@ -95,7 +91,6 @@ function App() {
           </Route>
 
           <Route path="/">
-            <Cheader/>
             <Cshops/>
           </Route>
 

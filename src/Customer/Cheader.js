@@ -12,9 +12,6 @@ function Cheader() {
 
 
     const [{ cbasket, user }, dispatch] = useStateValue();
-
-    const [Products,setProducts] = useState();
-
     const [Retailshop,setRetailshop] = useState();
     var docRet = db.collection("Shops").doc("Ruben Bakery");
     docRet.get().then(function(doc) {

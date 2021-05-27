@@ -43,3 +43,107 @@
     display: flex;
     justify-content: space-between;
 }
+
+/* Header Css */
+
+*{
+    margin: 0;
+}
+
+.Rheader{
+    background-color: rgb(2, 26, 2);
+    color: white;
+    font-size: 150%;
+    font-family: 'Courier New', Courier, monospace ;
+    display: flex;
+    z-index: 5;
+    margin: 0px;
+    min-block-size: 40px;
+    top: 0;
+    position: sticky;
+    align-items: center;
+    
+}
+
+.R__log1{
+    height: 50px;
+    width: 50px;
+    min-height: 50px;
+    min-width: 50px;
+}
+.R__log2{
+    height: 50px;
+    width: 90px;
+    min-height: 50px;
+    min-width: 50px;
+}
+
+.Rheader__logo {
+  width: 100px;
+  object-fit: contain;
+  margin: 0 20px;
+  margin-top: 18px;
+}
+
+.Rheader__search {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  border-radius: 24px;
+}
+
+.Rheader__searchInput {
+  height: 12px;
+  margin-left: 20px;
+  margin-right: 1px;
+  padding: 8px;
+  border: none;
+  width: 100%;
+}
+
+.Rheader__searchIcon {
+  padding: 5px;
+  height: 22px !important;
+  background-color: #cd9042;
+}
+
+.Rheader__optionLineOne {
+  font-size: 10px;
+  text-decoration: none;
+}
+
+.Rheader__optionLineTwo {
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.Rheader__optionBasket {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.Rheader__basketCount {
+  margin-left: 5px;
+  margin-right: 10px;
+}
+
+.Rheader__nav {
+  display: flex;
+  justify-content: space-evenly;
+  text-decoration: none;
+}
+
+.Rheader__option {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+Link{
+    text-decoration: none;
+}
