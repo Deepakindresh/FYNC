@@ -46,5 +46,78 @@
         "phone" : "9071234560",
         "shopLocation" : "Mylapore, Chennai-04",
         "shopName" : "SSS"
+    },
+    {
+        "Aadhar" : "4646 4567 7854 3454",
+        "closeTime" : "9pm",
+        "description" : "All household Electronic items.",
+        "email" : "rathnafanhouse@gmail.com",
+        "image" : "https://i.ytimg.com/vi/g6NFVCIBd3Y/maxresdefault.jpg",
+        "openTime" : "7am",
+        "password" : "Rathna_no.1",
+        "phone" : "9367528567",
+        "shopLocation" : "Mylapore, Chennai-04",
+        "shopName" : "Rathna Fan House"
+    },
+    {
+        "Aadhar" : "4567 3454 9801 7391",
+        "closeTime" : "11pm",
+        "description" : "All items available from fruits to furniture",
+        "email" : "saravana_stores@gmail.com",
+        "image" : "https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-875k9crd4bq7rjpeer80isovv0-20190720064804.Medi.jpeg",
+        "openTime" : "8am",
+        "password" : "thegreatdancer",
+        "phone" : "7854321897",
+        "shopLocation" : "Mylapore, Chennai-04",
+        "shopName" : "SARAVANA STORES"
+    },
+    {
+        "Aadhar" : "2222 4567 8901 7879",
+        "closeTime" : "11pm",
+        "description" : "bags, bedsheets and pillows",
+        "email" : "hariyana_handloom@gmail.com",
+        "image" : "https://images.jdmagicbox.com/comp/chennai/a4/044pxx44.xx44.131009123728.u9a4/catalogue/haryana-handloom-chennai-zvdgwab1zm.jpg?clr=#403326",
+        "openTime" : "10am",
+        "password" : "hariyanacovers",
+        "phone" : "6945602875",
+        "shopLocation" : "Mylapore, Chennai-04",
+        "shopName" : "HARIYANA HANDLOOM"
+    },
+    {
+        "Aadhar" : "9056 8765 3450 8999 ",
+        "closeTime" : "9pm",
+        "description" : "traditional indian handmade products",
+        "email" : "khadiindiaorg@gmail.com",
+        "image" : "https://images.jdmagicbox.com/comp/chennai/m3/044p1229922400j6y6m3/catalogue/khadi-gramodyog-bhavan-t-nagar-chennai-handicraft-item-dealers-9vfvwg8xfo.jpg?clr=#552211",
+        "openTime" : "9am",
+        "password" : "khadiindia",
+        "phone" : "8765876935",
+        "shopLocation" : "Mylapore, Chennai-04",
+        "shopName" : "KHADI INDIA"
+    },
+    {
+        "Aadhar" : "6766 8923 9012 4543",
+        "closeTime" : "10pm",
+        "description" : "All stationery, clothing, food and electronic appliances are available.",
+        "email" : "BIGBIZAARCORPORATE@gmail.com",
+        "image" : "https://cdn.i.haymarketmedia.asia/?n=campaign-india%2Fcontent%2Fbigbazaar2.jpg&h=570&w=855&q=100&v=20170226&c=1",
+        "openTime" : "9am",
+        "password" : "BIGBAZAAR123",
+        "phone" : "8976567784",
+        "shopLocation" : "Mylapore, Chennai-04",
+        "shopName" : "BIG BAZAAR"
+    },
+    {
+        "Aadhar" : "2345 6766 5654 3219",
+        "closeTime" : "11pm",
+        "description" : "All electronic appliances available",
+        "email" : "meryelectronics@gmail.com",
+        "image" : "https://images.jdmagicbox.com/comp/chennai/s7/044pxx44.xx44.100929123341.v4s7/catalogue/mercy-electricals-vadapalani-chennai-electrical-shops-Da2tYF5YOoECFzX.jpg?clr=",
+        "openTime" : "11am",
+        "password" : "meryelectronics123",
+        "phone" : "7865107821",
+        "shopLocation" : "Mylapore, Chennai-04",
+        "shopName" : "MERCY ELECTRONICS"
     }
+
 ]
