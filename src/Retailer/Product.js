@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Product.css";
 import { useStateValue } from "../StateProvider";
 
@@ -27,7 +27,7 @@ function Product({ id, title, image, price, rating }) {
       <div className="product__info">
         <p>{title}</p>
         <p className="product__price">
-          <small>$</small>
+          <small>Rs </small>
           <strong>{price}</strong>
         </p>
         <div className="product__rating">

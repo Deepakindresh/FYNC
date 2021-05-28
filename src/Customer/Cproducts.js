@@ -18,6 +18,7 @@ import { Link } from "react-router-dom";
 function Cproducts() {
 
     const [{ shop,retailer }] = useStateValue();
+    const [search, setSearch] = useState("");
 
     // Header Code
 
@@ -47,6 +48,10 @@ function Cproducts() {
       auth.signOut();
     }
   }
+
+  let filteredData = shop.filter((item)=>{
+        return item.title.toLowerCase().indexOf(search.toLowerCase()) !== -1
+    })
     
     return (
         <div>
@@ -59,9 +64,9 @@ function Cproducts() {
             </Link>
             
 
-            <div className="Cheader__search">
-             <input className="Cheader__searchInput" type="text" />
-            <SearchIcon className="Cheader__searchIcon" />
+            <div className="Rheader__search">
+             <input className="Rheader__searchInput" type="text" value={search} onChange={(e) => setSearch(e.target.value)}/>
+            <SearchIcon className="Rheader__searchIcon" type="submit" value={search} onClick={(e) => setSearch(search)} />
             </div>
 
             <div className="Cheader__nav">
@@ -112,7 +117,7 @@ function Cproducts() {
                     <div className="Ryourshop__title">
                         <h2>Ruben Bakery</h2>
                     </div>
-                    {shop.map(item => 
+                    {filteredData.map(item => 
                         <ShopProduct
                         id = {item.id}
                         title = {item.title}

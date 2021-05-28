@@ -80,7 +80,43 @@ function Rproducts() {
                        />);
       }
       break;
-      case 3: for (let i=5;i<filteredData.length;i++) {
+      case 3: for (let i=5;i<9;i++) {
+          let Retailer = filteredData[i];
+     Retailer && displayRetailers.push(<Product
+                         id={Retailer.id}
+                         title={Retailer.title}
+                         price={Retailer.price}
+                         rating={Retailer.rating}
+                         image={Retailer.image}
+                       />);
+      }
+      break;
+
+      case 4: for (let i=9;i<13;i++) {
+          let Retailer = filteredData[i];
+     Retailer && displayRetailers.push(<Product
+                         id={Retailer.id}
+                         title={Retailer.title}
+                         price={Retailer.price}
+                         rating={Retailer.rating}
+                         image={Retailer.image}
+                       />);
+      }
+      break;
+
+      case 5: for (let i=13;i<17;i++) {
+          let Retailer = filteredData[i];
+     Retailer && displayRetailers.push(<Product
+                         id={Retailer.id}
+                         title={Retailer.title}
+                         price={Retailer.price}
+                         rating={Retailer.rating}
+                         image={Retailer.image}
+                       />);
+      }
+      break;
+
+      case 6: for (let i=17;i<filteredData.length;i++) {
           let Retailer = filteredData[i];
      Retailer && displayRetailers.push(<Product
                          id={Retailer.id}
@@ -158,6 +194,24 @@ function Rproducts() {
             <div className="home__row">
               {
                 displayProds(filteredData,3)
+              }
+            </div>
+
+            <div className="home__row">
+              {
+                displayProds(filteredData,4)
+              }
+            </div>
+
+            <div className="home__row">
+              {
+                displayProds(filteredData,5)
+              }
+            </div>
+
+            <div className="home__row">
+              {
+                displayProds(filteredData,6)
               }
             </div>
                 

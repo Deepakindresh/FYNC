@@ -17,6 +17,7 @@ import { auth,db } from "../Firebase";
 
 function Ccheckout() {
     const [{ cbasket }] = useStateValue();
+    const [search, setSearch] = useState("");
 
     // Header Code
 
@@ -46,6 +47,13 @@ function Ccheckout() {
       auth.signOut();
     }
   }
+
+
+  let filteredData = cbasket.filter((item)=>{
+        return item.title.toLowerCase().indexOf(search.toLowerCase()) !== -1
+    })
+
+
     return (
         <div className="checkout">
             <div>
@@ -56,9 +64,9 @@ function Ccheckout() {
             </Link>
             
 
-            <div className="Cheader__search">
-             <input className="Cheader__searchInput" type="text" />
-            <SearchIcon className="Cheader__searchIcon" />
+            <div className="Rheader__search">
+             <input className="Rheader__searchInput" type="text" value={search} onChange={(e) => setSearch(e.target.value)}/>
+            <SearchIcon className="Rheader__searchIcon" type="submit" value={search} onClick={(e) => setSearch(search)} />
             </div>
 
             <div className="Cheader__nav">
@@ -103,7 +111,7 @@ function Ccheckout() {
             ):(
                 <div>
                     <h2 className="checkout__title">Your Shopping Basket</h2>
-                    {cbasket.map(item => (
+                    {filteredData.map(item => (
                         <CheckoutProduct
                         id = {item.id}
                         title = {item.title}

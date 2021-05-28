@@ -18,7 +18,7 @@ function CheckoutProduct({ id, title, image, price, rating}) {
             <div className="checkoutProduct__info">
                 <p className="checkoutProduct__title">{title}</p>
                 <p className="checkoutProduct__price">
-                <small>$</small>
+                <small>Rs </small>
                 <strong>{price}</strong>
                 </p>
                 <div className="checkoutProduct__rating">
