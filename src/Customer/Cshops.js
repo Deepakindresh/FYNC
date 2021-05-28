@@ -27,7 +27,6 @@ function Cshops() {
     docRet.get().then(function(doc) {
     if (doc.exists) {
         setRetailshop(doc.data());
-        console.log("Hello")
     } else {
         // doc.data() will be undefined in this case
         console.log("No such document!");
@@ -37,6 +36,10 @@ function Cshops() {
     });
 
     function addretailer(){
+      if(Retailshop){
+        shops.unshift(Retailshop)
+      }
+      
       dispatch({
         type: "ADD_TO_RETAILER",
         shop: Retailshop
@@ -58,7 +61,7 @@ function Cshops() {
       let displayRetailers = []
       switch(choice)
       {
-        case 1: for (let i=0;i<2;i++) {
+        case 1: for (let i=0;i<3;i++) {
           let shopRet = filteredData[i];
      shopRet && displayRetailers.push(<Shop
                         Aadhar = {shopRet.Aadhar}
@@ -74,7 +77,7 @@ function Cshops() {
                        />);
       }
       break;
-      case 2: for (let i=2;i<4;i++) {
+      case 2: for (let i=3;i<5;i++) {
           let shopRet = filteredData[i];
      shopRet && displayRetailers.push(<Shop
                         Aadhar = {shopRet.Aadhar}
@@ -90,7 +93,24 @@ function Cshops() {
                        />);
       }
       break;
-      case 3: for (let i=4;i<filteredData.length;i++) {
+      case 3: for (let i=5;i<8;i++) {
+          let shopRet = filteredData[i];
+     shopRet && displayRetailers.push(<Shop
+                        Aadhar = {shopRet.Aadhar}
+                        closeTime = {shopRet.closeTime}
+                        description = {shopRet.description}
+                        email = {shopRet.email}
+                        image = {shopRet.image}
+                        openTime = {shopRet.openTime}
+                        password = {shopRet.password}
+                        phone = {shopRet.phone}
+                        shopLocation = {shopRet.shopLocation}
+                        shopName = {shopRet.shopName}
+                       />);
+      }
+      break;
+
+      case 4: for (let i=8;i<filteredData.length;i++) {
           let shopRet = filteredData[i];
      shopRet && displayRetailers.push(<Shop
                         Aadhar = {shopRet.Aadhar}
@@ -160,21 +180,6 @@ function Cshops() {
             <img className="home__image" src={l1} alt = ""></img>
             <div className="home__row">
                 {
-                    retailer?.map(shop => 
-                    <Shop
-                        Aadhar = {shop.Aadhar}
-                        closeTime = {shop.closeTime}
-                        description = {shop.description}
-                        email = {shop.email}
-                        image = {shop.image}
-                        openTime = {shop.openTime}
-                        password = {shop.password}
-                        phone = {shop.phone}
-                        shopLocation = {shop.shopLocation}
-                        shopName = {shop.shopName}
-                    />)
-                }
-                {
                    displayProds(filteredData,1)
                 }
                 
@@ -188,6 +193,12 @@ function Cshops() {
             <div className="home__row">
                 {
                    displayProds(filteredData,3)
+                }
+            </div>
+
+            <div className="home__row">
+                {
+                   displayProds(filteredData,4)
                 }
             </div>
             
