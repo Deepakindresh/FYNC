@@ -17,8 +17,41 @@ import { auth,db } from "../Firebase";
 
 function Rproducts() {
     const [search, setSearch] = useState("");
-    let filteredData = retailerprods.filter((retailer)=>{
-        return retailer.title.toLowerCase().indexOf(search.toLowerCase()) !== -1
+    
+    
+
+    // header code
+
+    const [{ basket, user }, dispatch] = useStateValue();
+    const [Retailshop,setRetailshop] = useState();
+    var docRet = db.collection("Shops").doc("Ruben Bakery");
+    docRet.get().then(function(doc) {
+    if (doc.exists) {
+        setRetailshop(doc.data());
+    } else {
+        // doc.data() will be undefined in this case
+        console.log("No such document!");
+    }
+}).catch(function(error) {
+    console.log("Error getting document:", error);
+});
+
+    let addRetailer = () =>{
+      dispatch({
+        type: "ADD_TO_RETAILER",
+        shop: Retailshop
+      })
+    }
+
+  const handleAuthenticaton = () => {
+    if (user) {
+      auth.signOut();
+    }
+  }
+
+  
+  let filteredData = retailerprods.filter((retailer)=>{
+        return (retailer.title.toLowerCase().indexOf(search.toLowerCase()) !== -1)
     })
     function displayProds(filteredData,choice)
     {
@@ -65,36 +98,6 @@ function Rproducts() {
     }
     return displayRetailers;
     };
-    
-
-    // header code
-
-    const [{ basket, user }, dispatch] = useStateValue();
-    const [Retailshop,setRetailshop] = useState();
-    var docRet = db.collection("Shops").doc("Ruben Bakery");
-    docRet.get().then(function(doc) {
-    if (doc.exists) {
-        setRetailshop(doc.data());
-    } else {
-        // doc.data() will be undefined in this case
-        console.log("No such document!");
-    }
-}).catch(function(error) {
-    console.log("Error getting document:", error);
-});
-
-    let addRetailer = () =>{
-      dispatch({
-        type: "ADD_TO_RETAILER",
-        shop: Retailshop
-      })
-    }
-
-  const handleAuthenticaton = () => {
-    if (user) {
-      auth.signOut();
-    }
-  }
   
     return (
         <div className="global">

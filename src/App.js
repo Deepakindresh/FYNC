@@ -42,6 +42,7 @@ function App() {
       unsubscribe();
     };
   },[]);
+  
 
   console.log("User is",user);
 

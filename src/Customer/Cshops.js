@@ -3,7 +3,7 @@ import Shop from './Shop'
 import l1 from '../img/bg.jpg'
 import {useStateValue} from '../StateProvider'
 import "./Cshops.css"
-
+import shops from './Shops.json'
 // Header imports
 
 import {useState} from 'react'
@@ -27,6 +27,7 @@ function Cshops() {
     docRet.get().then(function(doc) {
     if (doc.exists) {
         setRetailshop(doc.data());
+        console.log("Hello")
     } else {
         // doc.data() will be undefined in this case
         console.log("No such document!");
@@ -47,6 +48,71 @@ function Cshops() {
       auth.signOut();
     }
   }
+
+  let filteredData = shops.filter((sh)=>{
+        return ((sh.shopName.toLowerCase().indexOf(search.toLowerCase()) !== -1 || sh.shopLocation.toLowerCase().indexOf(search.toLowerCase()) !== -1 ) || sh.phone.indexOf(search) !== -1 )
+    })
+
+  function displayProds(filteredData,choice)
+    {
+      let displayRetailers = []
+      switch(choice)
+      {
+        case 1: for (let i=0;i<2;i++) {
+          let shopRet = filteredData[i];
+     shopRet && displayRetailers.push(<Shop
+                        Aadhar = {shopRet.Aadhar}
+                        closeTime = {shopRet.closeTime}
+                        description = {shopRet.description}
+                        email = {shopRet.email}
+                        image = {shopRet.image}
+                        openTime = {shopRet.openTime}
+                        password = {shopRet.password}
+                        phone = {shopRet.phone}
+                        shopLocation = {shopRet.shopLocation}
+                        shopName = {shopRet.shopName}
+                       />);
+      }
+      break;
+      case 2: for (let i=2;i<4;i++) {
+          let shopRet = filteredData[i];
+     shopRet && displayRetailers.push(<Shop
+                        Aadhar = {shopRet.Aadhar}
+                        closeTime = {shopRet.closeTime}
+                        description = {shopRet.description}
+                        email = {shopRet.email}
+                        image = {shopRet.image}
+                        openTime = {shopRet.openTime}
+                        password = {shopRet.password}
+                        phone = {shopRet.phone}
+                        shopLocation = {shopRet.shopLocation}
+                        shopName = {shopRet.shopName}
+                       />);
+      }
+      break;
+      case 3: for (let i=4;i<filteredData.length;i++) {
+          let shopRet = filteredData[i];
+     shopRet && displayRetailers.push(<Shop
+                        Aadhar = {shopRet.Aadhar}
+                        closeTime = {shopRet.closeTime}
+                        description = {shopRet.description}
+                        email = {shopRet.email}
+                        image = {shopRet.image}
+                        openTime = {shopRet.openTime}
+                        password = {shopRet.password}
+                        phone = {shopRet.phone}
+                        shopLocation = {shopRet.shopLocation}
+                        shopName = {shopRet.shopName}
+                       />);
+      }
+      break;
+
+      default: displayRetailers.push(null)
+      break;
+      
+    }
+    return displayRetailers;
+    };
 
     return (
         <div className="global">
@@ -108,55 +174,21 @@ function Cshops() {
                         shopName = {shop.shopName}
                     />)
                 }
-                <Shop
-                    Aadhar = "1111 2222 3333 4444"
-                    closeTime = "10pm"
-                    description = "If you want Quality products, you know where to come!"
-                    email = "thangam@gmail.com"
-                    image = "https://images.jdmagicbox.com/comp/chennai/s5/044pxx44.xx44.160106164554.q9s5/catalogue/thangam-stores-alandur-st-thomas-mount-chennai-provision-stores-3rmzk5.jpg?clr=#5a200c"
-                    openTime = "10am"
-                    password = "thangam"
-                    phone = "9123456780"
-                    shopLocation = "Mylapore, Chennai-04"
-                    shopName = "THANGAM STORES"
-                /><Shop
-                    Aadhar = "5555 4444 3456 9999"
-                    closeTime = "11pm"
-                    description = "Safety at your pockets!"
-                    email = "medplus@gmail.com"
-                    image = "https://upload.wikimedia.org/wikipedia/commons/3/3c/Medplus_logo.jpg"
-                    openTime = "6am"
-                    password = "medplus"
-                    phone = "9456234560"
-                    shopLocation = "Mylapore, Chennai-04"
-                    shopName = "MEDPLUS"
-                />
+                {
+                   displayProds(filteredData,1)
+                }
+                
             </div>
             <div className="home__row">
-                <Shop
-                    Aadhar = "1111 4444 6666 9999"
-                    closeTime = "7pm"
-                    description = "Where else would you buy the best fruits."
-                    email = "pazham@gmail.com"
-                    image = "https://b.zmtcdn.com/data/pictures/6/18728686/5e04b232e06728519771dc71a6a8d687.jpg?fit=around|1029:555&crop=1029:555;*,*"
-                    openTime = "6am"
-                    password = "pazham"
-                    phone = "8456790232"
-                    shopLocation = "Mylapore, Chennai-04"
-                    shopName = "PAZHAMUDIR"
-                />
-                <Shop
-                    Aadhar = "5555 4444 6666 9879"
-                    closeTime = "10pm"
-                    description = "All stationery available."
-                    email = "station@gmail.com"
-                    image = "https://content3.jdmagicbox.com/comp/noida/e8/011pxx11.xx11.160823151444.a3e8/catalogue/super-india-stationery-greater-noida-noida-stationery-shops-20goikt.jpg?clr=660027"
-                    openTime = "10am"
-                    password = "stationery"
-                    phone = "9071234560"
-                    shopLocation = "Mylapore, Chennai-04"
-                    shopName = "SSS"
-                />
+                {
+                   displayProds(filteredData,2)
+                }
+            </div>
+
+            <div className="home__row">
+                {
+                   displayProds(filteredData,3)
+                }
             </div>
             
         </div>

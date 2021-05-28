@@ -28,8 +28,8 @@ function ShopProduct({ id, title, image, price, rating}) {
             <div className="ShopProduct__info">
                 <p className="ShopProduct__title">{title}</p>
                 <p className="ShopProduct__price">
-                <small>Rs</small>
-                <strong>{price}</strong>
+                <small>Rs </small>
+                <strong> {price}</strong>
                 </p>
                 <div className="ShopProduct__rating">
                     {Array(rating)
