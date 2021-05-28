@@ -16,6 +16,9 @@ import { Link } from "react-router-dom";
 
 function Ryourshop() {
 
+
+    const [search, setSearch] = useState("");
+
     const [{ basket , retailer}] = useStateValue();
     const sendBasket = (event) => {
         event.preventDefault();
@@ -57,6 +60,9 @@ function Ryourshop() {
     }
   }
 
+  let filteredData = basket.filter((item)=>{
+        return item.title.toLowerCase().indexOf(search.toLowerCase()) !== -1
+    })
     return (
         <div>
             <div className="Rheader">
@@ -64,11 +70,10 @@ function Ryourshop() {
               <img className="R__log1" src={Logo1} alt="l"/>
               <img className="R__log2" src={Logo2} alt="l"/>
             </Link>
-            
-
+      
             <div className="Rheader__search">
-             <input className="Rheader__searchInput" type="text" />
-            <SearchIcon className="Rheader__searchIcon" />
+             <input className="Rheader__searchInput" type="text" value={search} onChange={(e) => setSearch(e.target.value)}/>
+            <SearchIcon className="Rheader__searchIcon" type="submit" value={search} onClick={(e) => setSearch(search)} />
             </div>
 
             <div className="Rheader__nav">
@@ -117,7 +122,7 @@ function Ryourshop() {
                         <div onClick={sendBasket} className="Ryourshop__save">Save</div>
                     </div>
                     
-                    {basket.map(item => (
+                    {filteredData.map(item => (
                         <ShopProduct
                         id = {item.id}
                         title = {item.title}

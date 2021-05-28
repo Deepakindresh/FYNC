@@ -13,8 +13,7 @@ import Rproducts from "./Retailer/Rproducts";
 import Ryourshop from "./Retailer/Ryourshop";
 import Rsignup from "./Retailer/Rsignup";
 import Wheader from "./Wheader"
-import Rheader from "./Retailer/Rheader"
-import Cheader from "./Customer/Cheader"
+
 
 
 

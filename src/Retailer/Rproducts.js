@@ -16,7 +16,6 @@ import { useStateValue } from "../StateProvider";
 import { auth,db } from "../Firebase";
 
 function Rproducts() {
-    const [numProd,setnumProd] = useState(0);
     const [search, setSearch] = useState("");
     let filteredData = retailerprods.filter((retailer)=>{
         return retailer.title.toLowerCase().indexOf(search.toLowerCase()) !== -1

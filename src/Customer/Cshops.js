@@ -18,7 +18,7 @@ import { auth,db } from "../Firebase";
 function Cshops() {
 
     const [{retailer}] = useStateValue();
-
+    const [search, setSearch] = useState("");
     // Header Code
 
     const [{ cbasket, user }, dispatch] = useStateValue();
@@ -58,10 +58,9 @@ function Cshops() {
               <img className="C__log2" src={Logo2} alt="l"/>
             </Link>
             
-
-            <div className="Cheader__search">
-             <input className="Cheader__searchInput" type="text" />
-            <SearchIcon className="Cheader__searchIcon" />
+            <div className="Rheader__search">
+             <input className="Rheader__searchInput" type="text" value={search} onChange={(e) => setSearch(e.target.value)}/>
+            <SearchIcon className="Rheader__searchIcon" type="submit" value={search} onClick={(e) => setSearch(search)} />
             </div>
 
             <div className="Cheader__nav">
