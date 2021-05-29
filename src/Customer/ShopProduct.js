@@ -1,5 +1,5 @@
 
-import React from 'react'
+import React,{useState} from 'react'
 import { useStateValue } from "../StateProvider";
 import "./ShopProduct.css"
 
@@ -14,7 +14,8 @@ function ShopProduct({ id, title, image, price, rating}) {
                     title,
                     image,
                     price,
-                    rating
+                    rating,
+                    
             }
             
     });
