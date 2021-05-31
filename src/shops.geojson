@@ -1,0 +1,209 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+    
+    
+    	{
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.04095563400938, 80.27448078205363
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "description": "If you want Quality products, you know where to come!",
+                "marker-symbol": "rail-metro",
+                "title": "THANGAM STORES",
+                "url": "http://www.wmata.com/rider_tools/pids/showpid.cfm?station_id=68",
+                "lines": [
+                    "Orange"
+                ],
+                "address": "4-1, Karneeswarapuram, Mylapore, Chennai, Tamil Nadu 600004"
+            }
+        },
+        
+        
+       {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.0375255170428, 80.27373421272573
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "description": "Safety at your pockets!",
+                "marker-symbol": "rail-metro",
+                "title": "MEDPLUS",
+                "url": "http://www.wmata.com/rider_tools/pids/showpid.cfm?station_id=68",
+                "lines": [
+                    "Orange"
+                ],
+                "address": "No-50, Bazaar Rd, Madhavaperumalpuram, Mylapore, Chennai, Tamil Nadu 600004"
+            }
+        },
+        
+       
+       {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.040866881405776, 80.23740472447271
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "description": "textile available",
+                "marker-symbol": "rail-metro",
+                "title": "POONAM",
+                "url": "http://www.wmata.com/rider_tools/pids/showpid.cfm?station_id=68",
+                "lines": [
+                    "Orange"
+                ],
+                "address": "73, Sir Theagaraya Rd, Pondy Bazaar, Parthasarathi Puram, T. Nagar, Chennai, Tamil Nadu 600017"
+            }
+        },
+        
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.047691579413677, 80.23742613997987
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "description": "Where else would you buy the best fruits.",
+                "marker-symbol": "rail-metro",
+                "title": "PAZHAMUDIR",
+                "url": "http://www.wmata.com/rider_tools/pids/showpid.cfm?station_id=68",
+                "lines": [
+                    "Orange"
+                ],
+                "address": "Kovai Pazhamudir Nilayam Old No.7, New, No.13, Bazullah Rd, T. Nagar, Chennai, Tamil Nadu 6000174"
+            }
+        },
+        
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.04123127261497, 80.23946628395089
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "description": "All household Electronic items.",
+                "marker-symbol": "rail-metro",
+                "title": "Rathna Fan House",
+                "url": "http://www.wmata.com/rider_tools/pids/showpid.cfm?station_id=68",
+                "lines": [
+                    "Orange"
+                ],
+                "address": "37, 1, Raja Bather St, Parthasarathi Puram, T. Nagar, Chennai, Tamil Nadu 600017"
+            }
+        },
+        
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.042746374642213, 80.23205261573477
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "description": "All items available from fruits to furniture",
+                "marker-symbol": "rail-metro",
+                "title": "SARAVANA STORES",
+                "url": "http://www.wmata.com/rider_tools/pids/showpid.cfm?station_id=68",
+                "lines": [
+                    "Orange"
+                ],
+                "address": "62, 13/1, Parthasarathi Puram, T. Nagar, Chennai, Tamil Nadu 6000174"
+            }
+        },
+        
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.04211895659821, 80.23758869316057
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "description": "bags, bedsheets and pillows",
+                "marker-symbol": "rail-metro",
+                "title": "Haryana Handloom",
+                "url": "http://www.wmata.com/rider_tools/pids/showpid.cfm?station_id=68",
+                "lines": [
+                    "Orange"
+                ],
+                "address": "New no. 66/3 ,pondy bazar, tnagar, next to balaji bhavan hotel, Chennai, Tamil Nadu 600017"
+            }
+        },
+        
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.03768694112286, 80.22999267456828
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "description": "traditional indian handmade products",
+                "marker-symbol": "rail-metro",
+                "title": "Khadi India",
+                "url": "http://www.wmata.com/rider_tools/pids/showpid.cfm?station_id=68",
+                "lines": [
+                    "Orange"
+                ],
+                "address": "46, Ranganathan St, Postal Colony, T. Nagar, Chennai, Tamil Nadu 600017"
+            }
+        },
+        
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.043244984880033, 80.23874676146357
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "description": "All stationery, clothing, food and electronic appliances are available.",
+                "marker-symbol": "rail-metro",
+                "title": "BIG BAZAAR",
+                "url": "http://www.wmata.com/rider_tools/pids/showpid.cfm?station_id=68",
+                "lines": [
+                    "Orange"
+                ],
+                "address": "Janpriya Centre, 34, Sir Theagaraya Rd, Pondy Bazaar, T. Nagar, Chennai, Tamil Nadu 600017"
+            }
+        },
+        
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.0736747229763, 80.27153404987081
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "description": "All electronic appliances available",
+                "marker-symbol": "rail-metro",
+                "title": "MERCY ELECTRONICS",
+                "url": "http://www.wmata.com/rider_tools/pids/showpid.cfm?station_id=68",
+                "lines": [
+                    "Orange"
+                ],
+                "address": "No.1, Mathaji Complex, Wallers Rd, Mount Road, Anna Salai, Chennai, Tamil Nadu 600002"
+            }
+        }
+        
+    ]
+}

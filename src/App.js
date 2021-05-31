@@ -13,9 +13,11 @@ import Rproducts from "./Retailer/Rproducts";
 import Ryourshop from "./Retailer/Ryourshop";
 import Rsignup from "./Retailer/Rsignup";
 import Wheader from "./Wheader"
+import Wfooter from "./Wfooter"
+import Footer from './Footer';
 
-
-
+import 'mapbox-gl/dist/mapbox-gl.css';
+import Wmap from './Wmap';
 
 
 function App() {
@@ -52,7 +54,6 @@ function App() {
      <div className="App">
        <Switch>
           
-          
           <Route path="/customer/login">
             <Clogin/>
           </Route>
@@ -88,6 +89,8 @@ function App() {
           <Route path="/Welcome">
             <Wheader/>
             <Welcome/>
+            <Wmap/>
+            <Footer/>
           </Route>
 
           <Route path="/">

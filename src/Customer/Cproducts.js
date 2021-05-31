@@ -3,7 +3,7 @@ import { useStateValue } from "../StateProvider";
 import { auth,db } from "../Firebase";
 import ShopProduct from './ShopProduct'
 import "./Cproducts.css";
-import Shop from './Shop';
+
 
 // Header imports
 

@@ -1,0 +1,23 @@
+.wmap{
+    height: 800px;
+    margin-top: -80px;
+    width: 100%;
+}
+
+.Buttons{
+    text-align: center;
+    font-size: xx-large;
+    border: 2px #010606 solid;
+    width: 200px;
+    border-radius: 20px;
+    background-color: #010606;
+    padding-top: 10px;
+    color: white;
+    margin-left: 20%;
+    height: 60px; 
+    z-index: 5;
+}
+.Buttons:hover{
+    background-color: white;
+    color: #010606;
+}
