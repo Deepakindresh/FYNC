@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>FYNC</title>
+
+    <script defer src="/__/firebase/8.6.3/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/8.6.3/firebase-auth.js"></script>
+    <script defer src="/__/firebase/8.6.3/firebase-functions.js"></script>
+    <script defer src="/__/firebase/8.6.3/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/8.6.3/firebase-storage.js"></script>
+    <script defer src="/__/firebase/8.6.3/firebase-analytics.js"></script>
+    <script defer src="/__/firebase/8.6.3/firebase-remote-config.js"></script>
+    <script defer src="/__/firebase/8.6.3/firebase-performance.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link
+href="https://fonts.googleapis.com/css?family=Open+Sans"
+rel="stylesheet"
+/>
+<script src="https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js"></script>
+<link
+href="https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css"
+rel="stylesheet"
+/>
+<style>
+body {
+margin: 0;
+padding: 0;
+}
+#map {
+position: absolute;
+top: 0;
+bottom: 0;
+width: 100%;
+}
+.marker {
+background-image: url('./marker.png');
+background-size: cover;
+width: 50px;
+height: 50px;
+border-radius: 50%;
+cursor: pointer;
+}
+.mapboxgl-popup {
+max-width: 200px;
+}
+.mapboxgl-popup-content {
+text-align: center;
+font-family: 'Open Sans', sans-serif;
+}
+</style>
+</head>
+<body>
+<div id="map"></div>
+ 
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiZGVlcGFraW5kcmVzaCIsImEiOiJja3BiNzN5ajYxMHdqMnZwNzBlcXRkbTFpIn0.1aoYq5t1UnwvuGGtU5Jgew';
+ 
+var geojson = {
+    "type": "FeatureCollection",
+    "features": [
+
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                     80.2742910689342, 13.041203512019255
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "Aadhar" : "5555 4444 7777 2156",
+        "closeTime" : "11pm",
+        "description" : "Best Breads and cakes in the country.",
+        "email" : "ruben@gmail.com",
+        "image" : "https://content3.jdmagicbox.com/comp/chennai/t6/044pxx44.xx44.100326115928.e2t6/catalogue/ruben-bakery-mylapore-chennai-cake-shops-13021zk.jpg?clr=273f3f",
+        "openTime" : "6am",
+        "password" : "rubenbakery",
+        "phone" : "9874123650",
+        "shopLocation" : "Mylapore, Chennai-04",
+        "shopName" : "RUBEN BAKERY",
+                "url": "http://localhost:3000",
+                "lines": [
+                    "Orange"
+                ],
+                "address": "No.51/4, Prasanna Vinayagar Koli Street, Chennai, Tamil Nadu 600004"
+            }
+        },
+    
+    
+    	{
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                     80.27448078205363, 13.04095563400938
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "Aadhar" : "1111 2222 3333 4444",
+        "closeTime" : "10pm",
+        "description" : "If you want Quality products, you know where to come!",
+        "email" : "thangam@gmail.com",
+        "image" : "https://images.jdmagicbox.com/comp/chennai/s5/044pxx44.xx44.160106164554.q9s5/catalogue/thangam-stores-alandur-st-thomas-mount-chennai-provision-stores-3rmzk5.jpg?clr:#5a200c",
+        "openTime" : "10am",
+        "password" : "thangam",
+        "phone" : "9123456780",
+        "shopLocation" : "Mylapore, Chennai-04",
+        "shopName" : "THANGAM STORES",
+                "url": "http://www.wmata.com/rider_tools/pids/showpid.cfm?station_id=68",
+                "lines": [
+                    "Orange"
+                ],
+                "address": "4-1, Karneeswarapuram, Mylapore, Chennai, Tamil Nadu 600004"
+            }
+        },
+        
+        
+       {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.27373421272573,13.0375255170428
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "Aadhar" : "5555 4444 3456 9999",
+                "closeTime" : "11pm",
+                "description" : "Safety at your pockets!",
+                "email" : "medplus@gmail.com",
+                "image" : "https://upload.wikimedia.org/wikipedia/commons/3/3c/Medplus_logo.jpg",
+                "openTime" : "6am",
+                "password" : "medplus",
+                "phone" : "9456234560",
+                "shopLocation" : "Mylapore, Chennai-04",
+                "shopName" : "MEDPLUS",
+                "lines": [
+                    "Orange"
+                ],
+                "address": "No-50, Bazaar Rd, Madhavaperumalpuram, Mylapore, Chennai, Tamil Nadu 600004"
+            }
+        },
+        
+       
+       {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.23740472447271, 13.040866881405776
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "Aadhar" : "8934 5676 9009 8710",
+        "closeTime" : "11pm",
+        "description" : "textile available",
+        "email" : "poonamstores@gmail.com",
+        "image" : "data:image/jpeg;base64,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",
+        "openTime" : "9am",
+        "password" : "POONAM",
+        "phone" : "9567465341",
+
+        "shopLocation" : "Mylapore, Chennai-04",
+        "shopName" : "POONAM",
+                "url": "http://www.wmata.com/rider_tools/pids/showpid.cfm?station_id=68",
+                "lines": [
+                    "Orange"
+                ],
+                "address": "73, Sir Theagaraya Rd, Pondy Bazaar, Parthasarathi Puram, T. Nagar, Chennai, Tamil Nadu 600017"
+            }
+        },
+        
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.23742613997987, 13.047691579413677
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "Aadhar" : "1111 4444 6666 9999",
+        "closeTime" : "7pm",
+        "description" : "Where else would you buy the best fruits.",
+        "email" : "pazham@gmail.com",
+        "image" : "https://b.zmtcdn.com/data/pictures/6/18728686/5e04b232e06728519771dc71a6a8d687.jpg?fit:around|1029:555&crop:1029:555;*,*",
+        "openTime" : "6am",
+        "password" : "pazham",
+        "phone" : "8456790232",
+        "shopLocation" : "Mylapore, Chennai-04",
+        "shopName" : "PAZHAMUDIR",
+                "url": "http://www.wmata.com/rider_tools/pids/showpid.cfm?station_id=68",
+                "lines": [
+                    "Orange"
+                ],
+                "address": "Kovai Pazhamudir Nilayam Old No.7, New, No.13, Bazullah Rd, T. Nagar, Chennai, Tamil Nadu 6000174"
+            }
+        },
+        
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.23946628395089, 13.04123127261497
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "Aadhar" : "4646 4567 7854 3454",
+        "closeTime" : "9pm",
+        "description" : "All household Electronic items.",
+        "email" : "rathnafanhouse@gmail.com",
+        "image" : "https://i.ytimg.com/vi/g6NFVCIBd3Y/maxresdefault.jpg",
+        "openTime" : "7am",
+        "password" : "Rathna_no.1",
+        "phone" : "9367528567",
+        "shopLocation" : "Mylapore, Chennai-04",
+        "shopName" : "Rathna Fan House",
+                "lines": [
+                    "Orange"
+                ],
+                "address": "37, 1, Raja Bather St, Parthasarathi Puram, T. Nagar, Chennai, Tamil Nadu 600017"
+            }
+        },
+        
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.23205261573477, 13.042746374642213
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "Aadhar" : "4567 3454 9801 7391",
+        "closeTime" : "11pm",
+        "description" : "All items available from fruits to furniture",
+        "email" : "saravana_stores@gmail.com",
+        "image" : "https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-875k9crd4bq7rjpeer80isovv0-20190720064804.Medi.jpeg",
+        "openTime" : "8am",
+        "password" : "thegreatdancer",
+        "phone" : "7854321897",
+        "shopLocation" : "Mylapore, Chennai-04",
+        "shopName" : "SARAVANA STORES",
+                "url": "http://www.wmata.com/rider_tools/pids/showpid.cfm?station_id=68",
+                "lines": [
+                    "Orange"
+                ],
+                "address": "62, 13/1, Parthasarathi Puram, T. Nagar, Chennai, Tamil Nadu 6000174"
+            }
+        },
+        
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.23758869316057, 13.04211895659821
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                 "Aadhar" : "2222 4567 8901 7879",
+        "closeTime" : "11pm",
+        "description" : "bags, bedsheets and pillows",
+        "email" : "haryana_handloom@gmail.com",
+        "image" : "https://images.jdmagicbox.com/comp/chennai/a4/044pxx44.xx44.131009123728.u9a4/catalogue/haryana-handloom-chennai-zvdgwab1zm.jpg?clr=#403326",
+        "openTime" : "10am",
+        "password" : "haryanacovers",
+        "phone" : "6945602875",
+        "shopLocation" : "Mylapore, Chennai-04",
+        "shopName" : "HARYANA HANDLOOM",
+                "url": "http://www.wmata.com/rider_tools/pids/showpid.cfm?station_id=68",
+                "lines": [
+                    "Orange"
+                ],
+                "address": "New no. 66/3 ,pondy bazar, tnagar, next to balaji bhavan hotel, Chennai, Tamil Nadu 600017"
+            }
+        },
+        
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.22999267456828, 13.03768694112286 
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "Aadhar" : "9056 8765 3450 8999 ",
+        "closeTime" : "9pm",
+        "description" : "traditional indian handmade products",
+        "email" : "khadiindiaorg@gmail.com",
+        "image" : "https://images.jdmagicbox.com/comp/chennai/m3/044p1229922400j6y6m3/catalogue/khadi-gramodyog-bhavan-t-nagar-chennai-handicraft-item-dealers-9vfvwg8xfo.jpg?clr=#552211",
+        "openTime" : "9am",
+        "password" : "khadiindia",
+        "phone" : "8765876935",
+        "shopLocation" : "Mylapore, Chennai-04",
+        "shopName" : "KHADI INDIA",
+                "lines": [
+                    "Orange"
+                ],
+                "address": "46, Ranganathan St, Postal Colony, T. Nagar, Chennai, Tamil Nadu 600017"
+            }
+        },
+        
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.23874676146357, 13.043244984880033 
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "Aadhar" : "6766 8923 9012 4543",
+        "closeTime" : "10pm",
+        "description" : "All stationery, clothing, food and electronic appliances are available.",
+        "email" : "BIGBIZAARCORPORATE@gmail.com",
+        "image" : "https://cdn.i.haymarketmedia.asia/?n=campaign-india%2Fcontent%2Fbigbazaar2.jpg&h=570&w=855&q=100&v=20170226&c=1",
+        "openTime" : "9am",
+        "password" : "BIGBAZAAR123",
+        "phone" : "8976567784",
+        "shopLocation" : "Mylapore, Chennai-04",
+        "shopName" : "BIG BAZAAR",
+                "url": "http://www.wmata.com/rider_tools/pids/showpid.cfm?station_id=68",
+                "lines": [
+                    "Orange"
+                ],
+                "address": "Janpriya Centre, 34, Sir Theagaraya Rd, Pondy Bazaar, T. Nagar, Chennai, Tamil Nadu 600017"
+            }
+        },
+        
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    80.27153404987081, 13.0736747229763 
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+               "Aadhar" : "2345 6766 5654 3219",
+        "closeTime" : "11pm",
+        "description" : "All electronic appliances available",
+        "email" : "meryelectronics@gmail.com",
+        "image" : "https://images.jdmagicbox.com/comp/chennai/s7/044pxx44.xx44.100929123341.v4s7/catalogue/mercy-electricals-vadapalani-chennai-electrical-shops-Da2tYF5YOoECFzX.jpg?clr=",
+        "openTime" : "11am",
+        "password" : "meryelectronics123",
+        "phone" : "7865107821",
+        "shopLocation" : "Mylapore, Chennai-04",
+        "shopName" : "MERCY ELECTRONICS",
+                "url": "http://www.wmata.com/rider_tools/pids/showpid.cfm?station_id=68",
+                "lines": [
+                    "Orange"
+                ],
+                "address": "No.1, Mathaji Complex, Wallers Rd, Mount Road, Anna Salai, Chennai, Tamil Nadu 600002"
+            }
+        }
+        
+    ]
+};
+
+ 
+var map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/mapbox/light-v10',
+center: [80, 13],
+zoom: 9
+});
+ 
+// add markers to map
+geojson.features.forEach(function (marker) {
+// create a HTML element for each feature
+var el = document.createElement('div');
+el.className = 'marker';
+ 
+// make a marker for each feature and add it to the map
+new mapboxgl.Marker(el)
+.setLngLat(marker.geometry.coordinates)
+.setPopup(
+new mapboxgl.Popup({ offset: 25 }) // add popups
+.setHTML(
+'<h2>' +
+marker.properties.shopName +
+'</h2>' + '<img width = "200px" src = "' + marker.properties.image + '"/>' +
+'<h4>' +
+marker.properties.description +
+'</h4><h4>' + marker.properties.openTime + ' - ' + marker.properties.closeTime + '</h4>' + '<h4> Contact No: ' + marker.properties.phone + '</h4>' + 
+'<p>' + 
+marker.properties.address +
+'</p>' + '<div"><a href="http://localhost:3000" style="text-decoration:none;">Go to Shops</a></div>'
+
+)
+)
+.addTo(map);
+});
+</script>
+<script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const loadEl = document.querySelector('#load');
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.firestore().doc('/foo/bar').get().then(() => { });
+        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        // firebase.analytics(); // call to activate
+        // firebase.analytics().logEvent('tutorial_completed');
+        // firebase.performance(); // call to activate
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+        try {
+          let app = firebase.app();
+          let features = [
+            'auth', 
+            'database', 
+            'firestore',
+            'functions',
+            'messaging', 
+            'storage', 
+            'analytics', 
+            'remoteConfig',
+            'performance',
+          ].filter(feature => typeof app[feature] === 'function');
+          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+</body>
+</html>
