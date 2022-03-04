@@ -3,14 +3,13 @@ import "firebase/firestore";
 
 const firebaseApp = firebase.initializeApp(
     {
-        apiKey: "AIzaSyDaBHXSGq2fxT6f3WqObiU_kn4VlhNzCpY",
-        authDomain: "iip-project-6f2a0.firebaseapp.com",
-        databaseURL: "https://iip-project-6f2a0.firebaseio.com",
-        projectId: "iip-project-6f2a0",
-        storageBucket: "iip-project-6f2a0.appspot.com",
-        messagingSenderId: "770865597343",
-        appId: "1:770865597343:web:0fbc394fec3a078573cbaa",
-        measurementId: "G-Z2R0ZS0HGY"
+        apiKey: process.env.REACT_APP_API_KEY,
+        authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+        projectId: process.env.REACT_APP_PROJECT_ID,
+        storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+        messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+        appId: process.env.REACT_APP_ID,
+        measurementId: process.env.REACT_APP_MEASUREMENT_ID
     }
 );
 
